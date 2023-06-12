@@ -8,6 +8,7 @@ project( project_template
 set( CMAKE_CXX_STANDARD 11 )
 set( CMAKE_CXX_EXTENSIONS ON )
 
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 message( STATUS "Using toolchain file: ${CMAKE_TOOLCHAIN_FILE}" )
 
