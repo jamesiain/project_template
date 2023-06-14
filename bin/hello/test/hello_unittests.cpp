@@ -2,7 +2,7 @@
 
 #include "../src/hello.hpp"
 
-TEST_CASE("Use the correct greeting", "[hello]")
+TEST_CASE("Correct greeting in English", "[greet][hello][english]")
 {
     REQUIRE(hello("World") == "Hello, World!");
     REQUIRE(hello("Alex") == "Hello, Alex!");

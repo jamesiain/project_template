@@ -46,4 +46,11 @@ if( NOT CMAKE_CONFIGURATION_TYPES )
     set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${common_relwithdebinfo_flags}" )
 endif()
 
+include( CTest )
+
+if( BUILD_TESTING )
+    find_package( Catch2 3 REQUIRED )
+    include( Catch )
+endif()
+
 add_subdirectory( bin )

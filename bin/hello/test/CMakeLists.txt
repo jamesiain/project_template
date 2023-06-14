@@ -1,6 +1,19 @@
-enable_testing()
+add_executable( hello_unittests )
 
-find_package(Catch2 3 REQUIRED)
+target_link_libraries( hello_unittests
+    PRIVATE
+                Catch2::Catch2WithMain
+)
 
-add_executable(hello_tests ../src/hello.cpp hello_tests.cpp)
-target_link_libraries(hello_tests PRIVATE Catch2::Catch2WithMain)
+target_include_directories( hello_unittests
+    PRIVATE
+                "../src"
+  )
+
+target_sources( hello_unittests
+    PRIVATE
+                "../src/hello.cpp"
+                "hello_unittests.cpp"
+)
+
+catch_discover_tests( hello_unittests )

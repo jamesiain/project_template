@@ -17,4 +17,6 @@ target_sources( hello
                 "src/main.cpp"
 )
 
-add_subdirectory( test )
+if( BUILD_TESTING )
+  add_subdirectory( test )
+endif()
